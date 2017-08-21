@@ -1,8 +1,8 @@
-# Cryptum: SpartanToken
+# Cryptum: SpartanToken Retriever
 [![N|Solid](https://i.imgur.com/E618Whk.png)](https://www.twitter.com/_SuckMyLuck)
 
 ### What is this?
-**SpartanToken** allows anyone to easily retrieve a **v3 SpartanToken Authorization** (X-343-Authorization-Spartan) and start interacting with Halo games API.
+**SpartanToken Retriever** allows anyone to easily retrieve a **v3 SpartanToken Authorization** (X-343-Authorization-Spartan) and start interacting with Halo games API.
 
 ### Basic usages
 ```javascript

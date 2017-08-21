@@ -1,7 +1,7 @@
 {
     "name": "cryptum-spartantoken-retriever",
     "description": "Easily retrieve your SpartanToken and start interacting with Halo games API",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": "Alexis 'Zeny' Bize <alexis.bize@gmail.com>",
     "license": "MIT",
     "dependencies": {
