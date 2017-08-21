@@ -10,8 +10,8 @@ import SpartanTokenRetriever from 'cryptum-spartantoken-retriever'
 
 // Requires Xbox LIVE credentials
 const SpartanToken = new SpartanTokenRetriever(
-	'email@xboxlive.com',
-	'password'
+    'email@xboxlive.com',
+    'password'
 );
 
 SpartanToken.retrieve()
@@ -52,10 +52,10 @@ Success output:
 Error output (wrong credentials):
 ```javascript
 {
-	code: 11,
-	status: 401,
-	message: 'Unauthorized',
-	reason: 'UNAUTHORIZED'
+    code: 11,
+    status: 401,
+    message: 'Unauthorized',
+    reason: 'UNAUTHORIZED'
 }
 ```
 
@@ -63,8 +63,8 @@ Error output (wrong credentials):
 **Methods:**
 
 * `error.getFormatedError()`
-	— Pretty print the last error.
-	
+    — Pretty print the last error.
+    
 * `error.getReason()`:
     — Return error reason.
     
