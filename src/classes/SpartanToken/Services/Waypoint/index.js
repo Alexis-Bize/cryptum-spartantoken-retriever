@@ -1,7 +1,7 @@
 import request from 'request'
 import queryString from 'query-string'
 
-import HaloDotAPIError, { getErrorByNamespaceKey } from '@classes/Errors'
+import SpartanTokenError, { getErrorByNamespaceKey } from '@classes/Errors'
 
 import HTTPStatus from '@modules/http/status'
 import HTTPMethods from '@modules/http/methods'
@@ -77,7 +77,7 @@ export default class WaypointService
             }, (err, response, body) => {
 
                 if (err || response.statusCode !== HTTPStatus.SUCCESS) {
-                    return reject(err || new HaloDotAPIError(
+                    return reject(err || new SpartanTokenError(
                         getErrorByNamespaceKey('INTERNAL_ERROR')
                     ));
                 }

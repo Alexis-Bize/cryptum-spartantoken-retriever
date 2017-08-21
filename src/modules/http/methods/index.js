@@ -1,3 +1,4 @@
 export default {
-    GET: 'GET'
+    GET: 'GET',
+    POST: 'POST'
 }

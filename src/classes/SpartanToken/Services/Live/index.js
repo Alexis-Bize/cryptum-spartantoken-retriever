@@ -4,7 +4,7 @@ import queryString from 'query-string'
 
 import _ from '@modules/helpers/lodash'
 import cookieHelper from '@modules/helpers/cookie'
-import HaloDotAPIError, { getErrorByNamespaceKey } from '@classes/Errors'
+import SpartanTokenError, { getErrorByNamespaceKey } from '@classes/Errors'
 
 import HTTPStatus from '@modules/http/status'
 import HTTPMethods from '@modules/http/methods'
@@ -91,7 +91,7 @@ export default class LiveService
             }, (err, response, body) => {
 
                 if (err || response.statusCode !== HTTPStatus.SUCCESS) {
-                    return reject(err || new HaloDotAPIError(
+                    return reject(err || new SpartanTokenError(
                         getErrorByNamespaceKey('INTERNAL_ERROR')
                     ));
                 }
@@ -101,7 +101,7 @@ export default class LiveService
 
                 if (undefined === postUrl || undefined === PPFT) {
                     return reject(
-                        new HaloDotAPIError(
+                        new SpartanTokenError(
                             getErrorByNamespaceKey('INTERNAL_ERROR')
                         )
                     );
@@ -134,13 +134,25 @@ export default class LiveService
                 i13: 1,
                 login: email,
                 loginfmt: email,
-                type: 11,
+                type:11,
                 LoginOptions: 1,
+                lrt: '',
                 passwd: password,
-                KMSI: 'on',
+                ps: 2,
+                psRNGCDefaultType: '',
+                psRNGCEntropy: '',
+                psRNGCSLK: '',
+                canary: '',
+                ctx: '', 
                 PPFT,
-                PPSX: 'Pa',
+                PPSX: 'Passpor',
                 NewUser: 1,
+                FoundMSAs: '',
+                fspost: 0,
+                i21: 0,
+                i2: 39,
+                i17: 0,
+                i18: '__ConvergedLoginPaginatedStrings|1,__ConvergedLogin_PCore|1',
                 i19: Math.round(Math.random() * 1000 * 100 * 10)
             };
 
@@ -174,7 +186,7 @@ export default class LiveService
 
                     if (undefined === WLIDToken) {
                         return reject(
-                            new HaloDotAPIError(
+                            new SpartanTokenError(
                                 getErrorByNamespaceKey('UNAUTHORIZED')
                             )
                         );
@@ -185,7 +197,7 @@ export default class LiveService
                 }
 
                 return reject(
-                    new HaloDotAPIError(
+                    new SpartanTokenError(
                         getErrorByNamespaceKey('UNAUTHORIZED')
                     )
                 );
