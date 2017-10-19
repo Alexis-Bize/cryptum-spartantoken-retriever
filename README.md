@@ -88,7 +88,7 @@ Error output (wrong credentials):
 * 500: Internal Error
 
 ### Want to contribute?
-Feel free to open a pull request or an issue on [GitHub](https://github.com/Alexis-Bize/cryptum-spartantoken)!
+Feel free to open a pull request or an issue on [GitHub](https://github.com/Alexis-Bize/cryptum-spartantoken-retriever)!
 
 ### Any questions?
 Tweet me at [@_SuckMyLuck](https://www.twitter.com/_SuckMyLuck) or message me on [Reddit](https://www.reddit.com/user/Zeny-/)!
